@@ -100,10 +100,7 @@ img {
   height: 250px; }
 
 .game__day-home-name-short {
-  display: none; }
-
-.game__day-away-name-short {
-  display: none; }
+  color: #ffffff; }
 
 .game__day-home-name {
   display: none; }

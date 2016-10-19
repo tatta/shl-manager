@@ -12,7 +12,8 @@ block content
                 each item in game.GameState
                   div.game__day-home
                     span.game__day-home-img
-                      img.game__day-home-img(src='/images/clublogos/SKE.png')
+                      img.game__day-home-img(src='/images/clublogos/' +
+                      game.HomeTeam[0].Code + '.png')
                     span.game__day-home-name
                       span.game__day-home-name-short #{game.HomeTeam[0].Code}
                       span.game__day-home-name #{game.HomeTeam[0].Name}
@@ -22,7 +23,8 @@ block content
                     span.game__day-item-away-result.large-font  #{game.AwayScore}
                   div.game__day-away
                     span.game__day-away-img
-                       img.game__day-home-img(src='/images/clublogos/FBK.png')
+                       img.game__day-home-img(src='/images/clublogos/' +
+                      game.AwayTeam[0].Code + '.png')
                     span.game__day-away-name
                       span.game__day-away-name-short #{game.AwayTeam[0].Code}
                       span.game__day-away-name #{game.AwayTeam[0].Name}

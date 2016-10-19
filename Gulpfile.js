@@ -7,19 +7,19 @@ var pug = require('gulp-pug');
 var parser = new xml2js.Parser(xml2js.defaults["0.2"]);
 
 
-gulp.task('styles', function() {
+gulp.task('sass', function() {
     gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./public/styles/'))
 });
 
 gulp.task('pug', function() {
-    gulp.src('views/*.pug').
+    gulp.src('views/layout.pug').
     pipe(pug())
     .pipe(gulp.dest('public/'))
 });
 
-gulp.task('js', function(){
+gulp.task('scripts', function(){
    gulp.src('./public/javascripts/*.js')
    .pipe(concat('script.js'))
    .pipe(uglify())
@@ -28,8 +28,11 @@ gulp.task('js', function(){
 
 
 //Watch task
-gulp.task('default',function() {
-    gulp.watch('sass/**/*.scss', ['styles', 'js']);
+gulp.task('watch',function() {
+    gulp.watch('sass/**/*.scss', ['sass', 'scripts']);
     gulp.watch('views/**/*.pug', ['pug']);
-    gulp.watch('javascripts/**/*.js', ['js']);
+    gulp.watch('javascripts/**/*.js', ['scripts']);
 });
+
+// Default Task
+gulp.task('default', ['sass', 'scripts', 'watch']);

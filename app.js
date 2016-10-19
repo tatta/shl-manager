@@ -45,7 +45,7 @@ xmlToJson(url, function(err, data) {
     return console.err(err);
   }
   gameDaySummary = data;
-  console.log(gameDaySummary.Games[0].GameDayItem);
+  //console.log(gameDaySummary.Games[0].GameDayItem);
 });
 
 // set routes
