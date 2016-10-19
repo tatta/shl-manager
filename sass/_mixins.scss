@@ -1,0 +1,14 @@
+
+
+@mixin backgroundImage($url) {
+  background-image: url('/images/#{$url}');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

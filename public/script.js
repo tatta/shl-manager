@@ -1,0 +1,1 @@
+$(".game__day-list li:first").addClass("curr");var slide=function(){var a=$(".game__day-list li.curr");a.hide().removeClass("curr"),a.next()[0]&&"LI"==a.next()[0].nodeName?a.next().show("fade").addClass("curr"):$(".game__day-list li:first").addClass("curr").show("fade"),setTimeout(slide,4500)};

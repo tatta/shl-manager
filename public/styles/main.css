@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 0; }
+
+ul {
+  list-style-type: none; }
+
+dd {
+  margin: 0; }
+
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0; }
+
+/* Webfont: KlavikaBasic-Regular */
+@font-face {
+  font-family: 'KlavikaBasic';
+  src: url("/fonts/KlavikaBasic-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* Webfont: KlavikaBasic-Medium*/
+@font-face {
+  font-family: 'KlavikaMedium';
+  src: url("/fonts/KlavikaBasic-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* Webfont: KlavikaBasic-Bold */
+@font-face {
+  font-family: 'KlavikaBold';
+  src: url("/fonts/KlavikaBasic-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: bold; }
+
+/* Colors */
+body {
+  text-decoration: none;
+  font-family: 'KlavikaBold';
+  font-size: 16px;
+  background-color: #000000; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.container {
+  max-width: 800px;
+  height: 1200px;
+  margin: 0 auto; }
+
+.large-font {
+  font-size: 5em; }
+
+.game__day-header {
+  text-align: center;
+  color: #ffffff; }
+
+.game__day-staus-header {
+  text-align: center;
+  color: #8cb8ca;
+  padding-top: 1em; }
+
+.game__day-list-item {
+  display: block; }
+
+.game__day-list-item:first-child {
+  display: block; }
+
+.game__day-item {
+  margin-bottom: 10px;
+  background-image: url("/images/SCOREBOARD-RUTA.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: 100%;
+  height: 425px; }
+
+.game__day-status {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  height: 250px; }
+
+.game__day-away-name-short {
+  display: none; }
+
+.game__day-home-name-short {
+  display: none; }

@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  div.container
+    div.game
+      h1.game__day-header LIVESCORE
+      ul.game__day-list
+        each key in gameDaySummary
+          li !{key.Games} !{Games} #{GameDaySummaryReport}

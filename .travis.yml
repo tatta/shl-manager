@@ -1,0 +1,33 @@
+language: node_js
+sudo: false
+cache:
+  bundler: true
+  directories:
+  - node_modules
+before_install:
+- nvm install stable
+- npm install
+before_script:
+  - npm install -g gulp
+script: gulp
+branches:
+  only:
+  - master
+  - stage
+before_deploy:
+- git fetch --unshallow
+deploy:
+  provider: heroku
+  buildpack: nodejs
+  strategy: git
+  api_key:
+    secure: vEQ10vjdzVu0+hW9YL+r9NFLiwim/2v/n20xc3Hrfxhe9JIus0NFprX7BJItLXGw6WXktAXjWgD5ytH+Lj6JsprYx/lkuT/ckOdts5ii02l+taP4RpGA1VVp5kWrLMeFOPNm/xiIjjQ3D8GAh1PAojAzlVywdjtL73fQtdS2vn/vheMe2sjiM06BoeyCW5sutuns3tGlsYuorFAR3d+RWWNcQfLlzLaTiK9nzPfvb1Z3iqmQRLxSmZMuCHfKh8dYFoTHvoYDmcyUFPXkff1K0TJtHgsBcjwEFjMUUShfa/BEJm8rzRDebtDKJBbFtPEZ5ck7OAlcIWKIPzzXfqNa450cEbc3nnX1Kdbs83pQ/RNcOiwmCwjiMU88z8moZNopWvTfl+DLJCxPQdQI/SmP2HnbLuxMcmxUJac1PVxM3vMH+kLrHCAY7WBgxng7qudmkHIwVCeqmfOI4UG42+x+07E+rTZOTzOUfx6zjectAoOHdNounOahi+kkVV7/5MB9k2CUCrPADtp4rGq32f7jf9ylzayMVysSl49e7e8o1NkL67RAwTzZvUliTPAs7QM+JArGUWS4znM87PSPQAoqtTCw7lvR1v3QcvDhWAX3jzB5hyJIFi7T1CXkQhqn87q6ICTVsB4i935HpD8xwMOfSt9zATMUDIj0Yp5tNL50SwM=
+  skip_cleanup: true
+  app:
+    master: shl-manager-prod
+    stage: shl-manager-stage
+  on:
+    repo: TV4/SHL-Manager
+    branch:
+    - master
+    - stage
