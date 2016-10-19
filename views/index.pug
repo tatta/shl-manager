@@ -1,9 +1,28 @@
 extends ../layout
-
 block content
   div.container
     div.game
       h1.game__day-header LIVESCORE
       ul.game__day-list
-        each key in gameDaySummary
-          li !{key.Games} !{Games} #{GameDaySummaryReport}
+        each game in games
+          li.game__day-list-item
+            div.game__day-item
+              h2.game__day-staus-header #{game.GameState}
+              div.game__day-status
+                each item in game.GameState
+                  div.game__day-home
+                    span.game__day-home-img
+                      img.game__day-home-img(src='/images/clublogos/SKE.png')
+                    span.game__day-home-name
+                      span.game__day-home-name-short #{game.HomeTeam[0].Code}
+                      span.game__day-home-name #{game.HomeTeam[0].Name}
+                  div.game__day-result-container
+                    span.game__day-item-home-result.large-font  #{game.HomeScore}
+                    span.game__day-item-divider-result.large-font  -
+                    span.game__day-item-away-result.large-font  #{game.AwayScore}
+                  div.game__day-away
+                    span.game__day-away-img
+                       img.game__day-home-img(src='/images/clublogos/FBK.png')
+                    span.game__day-away-name
+                      span.game__day-away-name-short #{game.AwayTeam[0].Code}
+                      span.game__day-away-name #{game.AwayTeam[0].Name}

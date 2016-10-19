@@ -11,6 +11,4 @@ var slide = function(){
       }
   setTimeout(slide, 4500);
 }
-//slide();
-
-
+slide();

@@ -32,7 +32,7 @@ function xmlToJson(url, callback) {
     });
 
     res.on('end', function() {
-      parseString(xml, function(err, result) {
+      parseString(xml, {ignoreAttrs: true, explicitRoot: false },function(err, result) {
         callback(null, result);
       });
     });
@@ -45,7 +45,7 @@ xmlToJson(url, function(err, data) {
     return console.err(err);
   }
   gameDaySummary = data;
-  //console.log(gameDaySummary);
+  console.log(gameDaySummary.Games[0].GameDayItem);
 });
 
 // set routes
@@ -53,11 +53,9 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 app.get('/gameday', function(req, res) {
-  res.render('index', { gameDaySummary: gameDaySummary});
+  res.render('index', {games: gameDaySummary.Games[0].GameDayItem});
 });
 // Set server port
 app.listen(4000);
 console.log('server is running');
-
-
 

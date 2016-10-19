@@ -74,7 +74,7 @@ img {
   padding-top: 1em; }
 
 .game__day-list-item {
-  display: block; }
+  display: none; }
 
 .game__day-list-item:first-child {
   display: block; }
@@ -99,8 +99,14 @@ img {
   margin: 0 auto;
   height: 250px; }
 
+.game__day-home-name-short {
+  display: none; }
+
 .game__day-away-name-short {
   display: none; }
 
-.game__day-home-name-short {
+.game__day-home-name {
+  display: none; }
+
+.game__day-away-name {
   display: none; }
