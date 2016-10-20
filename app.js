@@ -13,7 +13,8 @@ app.use(express.static('public'));
 //Controllers
 //var gamedayController = require('/controllers/gameday.js');
 var url = "http://reports.statnet.se/report/20161013-gameday.xml";
-var gameDaySummary;
+//var url = "http://reports.statnet.se/report/FantasyTopList.xml";
+var gamesList;
 
 function xmlToJson(url, callback) {
   var req = http.get(url, function(res) {
@@ -44,8 +45,8 @@ xmlToJson(url, function(err, data) {
     // Handle this however you like
     return console.err(err);
   }
-  gameDaySummary = data;
-  //console.log(gameDaySummary.Games[0].GameDayItem);
+  gamesList = data;
+  //console.log(gamesList.Games[0].GameDayItem);
 });
 
 // set routes
@@ -53,7 +54,7 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 app.get('/gameday', function(req, res) {
-  res.render('index', {games: gameDaySummary.Games[0].GameDayItem});
+  res.render('index', {games: gamesList.Games[0].GameDayItem});
 });
 // Set server port
 app.listen(4000);

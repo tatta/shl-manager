@@ -4,7 +4,7 @@
 }
 .game__day-staus-header {
     text-align: center;
-    color: $shl-blue;
+    color: $white;
     padding-top: 1em;
 }
 .game__day-list-item {
@@ -16,7 +16,7 @@
 
 .game__day-item {
   margin-bottom: $small-margin-bot;
-  background-image: url('/images/SCOREBOARD-RUTA.png');
+  //background-image: url('/images/SCOREBOARD-RUTA.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position-y: 100%;
@@ -27,12 +27,17 @@
   @include flexbox;
   align-items: center;
   justify-content: space-around;
-  width: 80%;
   margin: 0 auto;
   height: 250px;
 }
 
+.game__day-result-container{
+  min-width: 150px;
+}
 
+.game__day-home {
+  text-align: center;
+}
 .game__day-home-name-short {
   //display: none;
   color: $white;
