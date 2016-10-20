@@ -1,6 +1,10 @@
 {
   "name": "shl",
   "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
   "devDependencies": {
     "express": "latest",
     "gulp": "latest",
@@ -9,5 +13,8 @@
     "gulp-jshint": "latest",
     "gulp-pug": "latest",
     "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "heroku-cli-util": "^6.0.15"
   }
 }
