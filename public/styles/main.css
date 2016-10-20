@@ -27,21 +27,21 @@ ul {
 /* Webfont: KlavikaBasic-Regular */
 @font-face {
   font-family: 'KlavikaBasic';
-  src: url("/fonts/KlavikaBasic-Regular.otf") format("opentype");
+  src: url("http://www.fotbollskanalen.se/Global/shl/KlavikaBasic-Regular.otf?1") format("opentype");
   font-style: normal;
   font-weight: normal; }
 
 /* Webfont: KlavikaBasic-Medium*/
 @font-face {
   font-family: 'KlavikaMedium';
-  src: url("/fonts/KlavikaBasic-Medium.otf") format("opentype");
+  src: url("http://www.fotbollskanalen.se/Global/shl/KlavikaBasic-Medium.otf?1") format("opentype");
   font-style: normal;
   font-weight: normal; }
 
 /* Webfont: KlavikaBasic-Bold */
 @font-face {
   font-family: 'KlavikaBold';
-  src: url("/fonts/KlavikaBasic-Bold.otf") format("opentype");
+  src: url("http://www.fotbollskanalen.se/Global/shl/KlavikaBasic-Bold.otf?1") format("opentype");
   font-style: normal;
   font-weight: bold; }
 
