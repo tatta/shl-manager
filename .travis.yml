@@ -6,7 +6,6 @@ cache:
   - node_modules
 before_install:
 - nvm install stable
-- npm install express
 - npm install
 branches:
   only:
