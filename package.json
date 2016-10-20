@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "heroku-cli-util": "^6.0.15",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "xml2js": "^3.10.8"
   }
 }
