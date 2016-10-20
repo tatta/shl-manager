@@ -7,10 +7,6 @@ cache:
 before_install:
 - nvm install stable
 - npm install
-before_script:
-  - npm install -g gulp
-  - npm install xml2js
-script: gulp
 branches:
   only:
   - master
